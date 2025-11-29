@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>FRIENDSHIP WEBSITE 2007</title>
+
+<!-- Фон — мерзкий градиент + звёздочки -->
+<style>
+body {
+  margin:0;
+  background:
+    url("https://media1.tenor.com/m/cROLr1iA2UMAAAAd/stars.gif"),
+    linear-gradient(135deg, #000033, #19004a, #32006e);
+  background-size: 300px, cover;
+  font-family: "Comic Sans MS", Arial, Impact;
+  color:#fff;
+  overflow-x:hidden;
+}
+.center { text-align:center; }
+.blink { animation: blink 0.8s infinite; }
+@keyframes blink { 50%{opacity:0.3;} }
+
+.marq {
+  font-size:38px;
+  font-weight:bold;
+  color: #fff;
+  background: linear-gradient(90deg, red, yellow, lime, cyan, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 6px rgba(255,255,255,0.7);
+}
+
+.section {
+  border: 6px double #fff;
+  padding:20px;
+  margin:40px auto;
+  width: 80%;
+  max-width:900px;
+  background: rgba(0,0,0,0.55);
+  box-shadow: 0 0 25px #000;
+  position: relative;
+}
+
+.photo-block {
+  width:100%;
+  height:450px;
+  background-size:cover;
+  background-position:center;
+  border:8px ridge #ff00ff;
+  box-shadow:0 0 20px #ff00d9;
+  position:relative;
+  overflow:hidden;
+}
+
+.glowText {
+  font-size:52px;
+  font-weight:bold;
+  text-shadow: 
+    0 0 6px #fff,
+    0 0 12px #ff00ff,
+    0 0 20px #ff00ff,
+    0 0 40px #ff008c;
+}
+
+.sticker {
+  position:absolute;
+  width:120px;
+  height:120px;
+}
+
+.spin {
+  animation: spin 4s linear infinite;
+}
+@keyframes spin {
+  0%{transform:rotate(0deg);}
+  100%{transform:rotate(360deg);}
+}
+
+.float {
+  animation: float 2.6s ease-in-out infinite;
+}
+@keyframes float {
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-14px);}
+  100%{transform:translateY(0);}
+}
+
+.marquee-bar {
+  margin-top:30px;
+  padding:10px;
+  background: linear-gradient(90deg, #ff0000, #ff9900, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
+  border-top:4px solid #fff;
+  border-bottom:4px solid #fff;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Бегущая строка 2007 -->
+<div class="marquee-bar">
+<marquee scrollamount="9" behavior="alternate">
+  <span class="marq">🔥 MR.V & MR.E 🔥</span>
+</marquee>
+</div>
+
+<!-- Блок MR. V -->
+<div class="section">
+  <div class="center glowText blink">MR. V & MR.E</div>
+
+  <div class="photo-block" style="background-image:url('mr_v.jpg');">
+    <!-- стикеры -->
+    <img src="https://media.tenor.com/M8m-uL_Xg1cAAAAi/sparkle-star.gif" class="sticker spin" style="left:10px; top:10px;">
+    <img src="https://media.tenor.com/1HRi5L3skC0AAAAi/emo.gif" class="sticker float" style="right:10px; bottom:10px;">
+    <img src="https://media.tenor.com/JlECfH3GMbIAAAAi/trollface.gif" class="sticker" style="left:20px; bottom:20px;">
+  </div>
+
+  <div class="center" style="margin-top:20px;">
+    <span style="font-size:32px; text-shadow:0 0 9px #0ff;">Official Member — Since 2007</span>
+  </div>
+
+  <!-- мигающий текст -->
+  <div class="center blink" style="font-size:26px; margin-top:10px;">
+    ★ BEST FRIENDSHIP CERTIFIED ★
+  </div>
+</div>
+
+
+
+  <div class="center blink" style="font-size:26px; margin-top:10px; color:#ffaeff;">
+    ★★ ULTRA FRIENDSHIP MODE ENABLED ★★
+  </div>
+</div>
+
+<div class="marquee-bar">
+<marquee scrollamount="9" behavior="alternate">
+  <span class="marq"> FRIENDSHIP PHOTOS </span>
+</marquee>
+</div>
+
+
+<!-- ========== ВСЕ ФОТКИ С ОБВОДКОЙ + ПРИБЛИЖЕНИЕМ ========== -->
+<div style="text-align:center; padding:50px 20px; background:rgba(0,0,0,0.4);">
+
+  <!-- 2 сверху — крупные, с обводкой и зумом -->
+  <div style="margin-bottom:40px;">
+    <img src="mr.e.jpg"  width="380" height="250" class="epic2007">
+    <img src="mr.v1.jpg" width="380" height="250" class="epic2007" style="margin-left:40px;">
+  </div>
+
+  <!-- 3 средние — тоже с обводкой и зумом -->
+  <div style="margin-bottom:60px;">
+    <img src="mr.e2.jpg"  width="300" height="200" class="epic2007">
+    <img src="1.jpg"      width="300" height="200" class="epic2007" style="margin:0 40px;">
+    <img src="mrv.jpg"   width="300" height="200" class="epic2007">
+  </div>
+
+</div>
+
+<!-- СТИЛИ 2007 ДЛЯ ВСЕХ ФОТОК -->
+<style>
+.epic2007 {
+  border:12px ridge #ff00ff !important;
+  outline:6px solid #00ffff !important;
+  outline-offset:-8px;
+  box-shadow:0 0 30px #ff00ff, 0 0 60px #00ffff, 0 0 90px #ff00ff;
+  transition:all 0.5s ease;
+  cursor:url('https://media.tenor.com/BeORKIEIVtcAAAAi/cursor-arrow.gif'), auto;
+}
+
+.epic2007:hover {
+  transform:scale(1.22) !important;           /* ← жирное приближение при наведении */
+  box-shadow:0 0 50px #ff00ff, 0 0 100px #00ffff, 0 0 150px #ff00ff, 0 0 200px #00ff00;
+  z-index:9999;
+  border-color:#00ff00 !important;
+}
+
+/* лёгкий рандомный наклон — как в 2007 все делали */
+.epic2007:nth-child(1) { transform:rotate(-7deg); }
+.epic2007:nth-child(2) { transform:rotate(6deg); }
+.epic2007:nth-child(3) { transform:rotate(4deg); }
+.epic2007:nth-child(4) { transform:rotate(-5deg); }
+.epic2007:nth-child(5) { transform:rotate(8deg); }
+</style>
+
+
+</body>
+</html>
