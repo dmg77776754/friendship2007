@@ -116,12 +116,12 @@ body {
   </div>
 
   <div class="center" style="margin-top:20px;">
-    <span style="font-size:32px; text-shadow:0 0 9px #0ff;">Official Member — Since 2007</span>
+    <span style="font-size:32px; text-shadow:0 0 9px #0ff;">official's gentelmens;</span>
   </div>
 
   <!-- мигающий текст -->
   <div class="center blink" style="font-size:26px; margin-top:10px;">
-    ★ BEST FRIENDSHIP CERTIFIED ★
+    ★ BEST MISTER*S ★
   </div>
 </div>
 
@@ -186,7 +186,7 @@ body {
 <!-- РАНДОМНЫЕ ЦИТАТЫ ДРУГ О ДРУГЕ -->
 <div style="margin:80px auto; max-width:800px; text-align:center;">
   <h2 style="font-size:42px; color:#00ffff; text-shadow:0 0 15px #ff00ff; margin-bottom:30px;">
-    Мы о друг друге:
+    наши великие цитаты:
   </h2>
 
   <div id="quote" 
@@ -230,6 +230,122 @@ setInterval(nextQuote, 8000);
 nextQuote();
 </script>
 
+<!-- ФЕЙКОВЫЙ МАГАЗИН ЛЕГЕНД + ОТПРАВКА В ТЕЛЕГУ -->
+<div style="margin:100px auto; max-width:1100px; background:rgba(0,0,0,0.7); border:12px ridge #00ff00; padding:40px; text-align:center;">
+  <h2 style="font-size:55px; color:#ff00ff; text-shadow:0 0 25px #00ffff;">МАГАЗИН ЛЕГЕНД</h2>
+  <p style="font-size:30px; color:lime;">Товары, которые нельзя купить за деньги</p>
+
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:40px; margin-top:50px;">
+
+    <!-- ТОВАР 1 -->
+    <div style="width:300px; background:#111; border:8px double #00ffff; padding:20px;">
+      <img src="bic.jpg" width="100%" style="border:2px solid #ff00ff;">
+      <h3 style="color:#ff00ff; font-size:24px;">бицуха mr.E (б/у)</h3>
+      <p>накачана синтолом и шаурмой 3 раза в день</p>
+      <b style="color:lime; font-size:28px;">42 000 ₽</b><br>
+      <button class="add-to-cart" style="margin-top:15px; padding:12px 30px; background:#ff00ff; color:black; border:none; font-weight:bold; cursor:pointer; font-size:18px;">
+        В КОРЗИНУ
+      </button>
+    </div>
+
+    <!-- ТОВАР 2 -->
+    <div style="width:300px; background:#111; border:8px double #00ffff; padding:20px;">
+      <img src="am.jpg" width="100%" style="border:2px solid #00ffff;">
+      <h3 style="color:#00ffff; font-size:24px;">mr.V AMERICAN LANGUAGE COACH!</h3>
+      <p>100% пендос. Сертификат куплен в переходе</p>
+      <b style="color:lime; font-size:28px;">99 999 ₽</b><br>
+      <button class="add-to-cart" style="margin-top:15px; padding:12px 30px; background:#ff00ff; color:black; border:none; cursor:pointer; font-size:18px;">
+        В КОРЗИНУ
+      </button>
+    </div>
+
+    <!-- ТОВАР 3 -->
+    <div style="width:300px; background:#111; border:8px double #00ffff; padding:20px;">
+      <img src="https://i.imgur.com/7rG5c.gif" width="100%">
+      <h3 style="color:yellow; font-size:24px;">хз че продавать еще</h3>
+      <p>ну да, а вы чего хотели? все силы ушли на тренировку у олега и разработку этого ебанного сайта</p>
+      <b style="color:lime; font-size:28px;">бесценно</b><br>
+      <button class="add-to-cart" style="margin-top:15px; padding:12px 30px; background:#00ff00; color:black; border:none; cursor:pointer; font-size:18px;">
+        ПОЛУЧИТЬ БЕСПЛАТНО
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<!-- МОДАЛКА С ОТПРАВКОЙ В ТЕЛЕГУ -->
+<div id="deliveryModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.97); z-index:9999; justify-content:center; align-items:center;">
+  <div style="background:#000; border:14px ridge #ff00ff; padding:50px; max-width:90%; color:white; box-shadow:0 0 60px #00ff00;">
+    <h2 style="color:#00ffff; text-align:center; font-size:44px; margin-bottom:30px;">ОФОРМЛЕНИЕ ЗАКАЗА</h2>
+    
+    <form id="orderForm">
+      <input type="text" placeholder="ФИО (можно выдуманное)" required style="width:100%; padding:18px; margin:12px 0; background:#111; color:lime; border:4px solid #00ff00; font-size:20px;"><br>
+      <input type="text" placeholder="Адрес (хоть Марс)" required style="width:100%; padding:18px; margin:12px 0; background:#111; color:lime; border:4px solid #00ff00; font-size:20px;"><br>
+      <input type="tel" placeholder="Телефон (8-800-...)" required style="width:100%; padding:18px; margin:12px 0; background:#111; color:lime; border:4px solid #00ff00; font-size:20px;"><br>
+      <textarea placeholder="Комментарий (мат приветствуется)" style="width:100%; height:120px; padding:18px; margin:12px 0; background:#111; color:lime; border:4px solid #00ff00; font-size:20px;"></textarea><br>
+      
+      <div style="text-align:center; margin-top:30px;">
+        <button type="button" onclick="sendOrder()" style="font-size:32px; padding:18px 60px; background:#00ff00; color:black; border:8px ridge #ff00ff; cursor:pointer;">
+          ОТПРАВИТЬ ЗАКАЗ
+        </button>
+      </div>
+    </form>
+    
+    <div style="text-align:center; margin-top:25px;">
+      <button onclick="closeModal()" style="color:#666; background:none; border:none; font-size:20px; cursor:pointer;">
+        закрыть нахуй
+      </button>
+</div>
+  </div>
+</div>
+
+<script>
+// ============ НАСТРОЙКИ ТЕЛЕГРАМ-БОТА (МЕНЯЕШЬ ТОЛЬКО ЗДЕСЬ) ============
+const BOT_TOKEN = '8450119388:AAGwRK2lh47sesnftAkDBa6VlIUCHkMsLLI';  // ← впиши свой
+const CHAT_ID   = '509020499';                               // ← впиши свой (группа или личка)
+// =========================================================================
+
+function openModal() {
+  document.getElementById('deliveryModal').style.display = 'flex';
+}
+
+function closeModal() {
+  document.getElementById('deliveryModal').style.display = 'none';
+}
+
+function sendOrder() {
+  const form = document.getElementById('orderForm');
+  const data = {
+    fio: form[0].value.trim(),
+    address: form[1].value.trim(),
+    phone: form[2].value.trim(),
+    comment: form[3].value.trim() || 'без коммента',
+    time: new Date().toLocaleString('ru-RU')
+  };
+
+  const message = `Новый заказ из МАГАЗИНА ЛЕГЕНД
+
+ФИО: ${data.fio}
+Адрес: ${data.address}
+Телефон: ${data.phone}
+Комментарий: ${data.comment}
+Время: ${data.time}
+Сайт: ${location.href}`;
+
+  fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(message)}`)
+    .then(() => {
+      form.reset();
+      closeModal();
+      setTimeout(() => alert('бл* нам лень'), 400);
+    })
+    .catch(() => alert('заказ улетел в космос, но мы его найдём'));
+}
+
+// Кнопки корзины
+document.querySelectorAll('.add-to-cart').forEach(btn => {
+  btn.addEventListener('click', openModal);
+});
+</script>
 
 </body>
 </html>
