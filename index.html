@@ -573,72 +573,6 @@ ensureThree().then(()=>{
   console.warn('ensureThree:', err);
 });
 </script>
-<!-- ИНТЕРЕСНАЯ ФУНКЦИЯ: ГЕНЕРАТОР ЛЕГЕНДНОЙ ИСТОРИИ -->
-<div style="position:fixed; right:18px; bottom:18px; z-index:100000; text-align:center;">
-  <button id="legendBtn" style="font-size:18px; padding:12px 18px; background:#ffdd55; color:#111; border:6px ridge #ff00ff; cursor:pointer; box-shadow:0 0 20px #ff00ff;">
-    Создать легенду
-  </button>
-</div>
-
-<div id="legendModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.95); color:white; z-index:200000; align-items:center; justify-content:center;">
-  <div style="max-width:900px; margin:auto; padding:30px; border:12px ridge #00ff00; background:linear-gradient(180deg,#111,#000); text-align:left;">
-    <h2 style="font-size:40px; color:#ffdd55; text-align:center; margin-bottom:8px;">Легенда готова</h2>
-    <div id="legendText" style="font-size:22px; line-height:1.5; padding:20px; background:rgba(255,255,255,0.03); border-radius:12px; min-height:140px;"></div>
-    <div style="text-align:center; margin-top:18px;">
-      <button id="copyLegend" style="margin-right:10px; padding:10px 18px; font-size:18px; cursor:pointer; background:#00ff00; border:6px ridge #ff00ff;">Копировать</button>
-      <button id="closeLegend" style="padding:10px 18px; font-size:18px; cursor:pointer; background:#ff00ff; border:6px ridge #00ffff;">Закрыть</button>
-    </div>
-  </div>
-</div>
-
-<div id="confettiLayer" style="pointer-events:none; position:fixed; inset:0; z-index:199999; overflow:hidden; display:block;"></div>
-
-<script>
-// Интересная функция — генератор короткой легенды/истории
-function randomOf(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
-
-function generateLegend(){
-  // более разговорные/сленговые варианты (без грубой лексики)
-  const starts = [
-    'Когда-то ночью на крыше гаража',
-    'В одном маленьком подъезде',
-    'Под звуки шаурмы и баса',
-    'В автобусе №7, на последней остановке',
-    'В далёком спортзале, после третьего подхода',
-    'По приколу, в полночь',
-    'На лавочке у двора, где всегда тусуются свои'
-  ];
-  const heroes = [
-    'появился странный человек',
-    'встретились два брата',
-    'приехал легендарный MR.V',
-    'заблудился мистер E',
-    'проснулся герой с бородой из скотча',
-    'подъехал чувак в потертых кроссах',
-    'влез старик с анекдотом и не ушёл'
-  ];
-  const deeds = [
-    'и украл у времени минуту, чтобы выпить чаю.',
-    'и сразу предложил съездить за шаурмой.',
-    'и переписал правила дружбы на салфетке.',
-    'и выиграл спор у самого себя.',
-    'и научил всех танцевать под дождём.',
-    'и договорился поменять мир местами по понятиям.',
-    'и сделал так, что все засмеялись до слёз'
-  ];
-  const twists = [
-    'С тех пор все знают — если хочешь счастья, звони в три ночи.',
-    'Говорят, он до сих пор прячет ключи от лета в ботинках.',
-    'И никто уже не помнит, кто начал эту легенду — важно, что она живёт.',
-    'А на память осталась только одна фотография и запах дымка шаурмы.',
-    'Так и родилась традиция: делиться последним куском пирога.',
-    'Теперь это стало нашей фишкой — кто придёт, тот знает правила игры.',
-    'С тех пор этот район стал чутка круче и немножко страннее.'
-  ];
-
-  const text = `${randomOf(starts)} ${randomOf(heroes)} ${randomOf(deeds)} ${randomOf(twists)}`;
-  const el = document.getElementById('legendText');
-  el.innerHTML = '❖ ' + text;
 
   // лёгкий визуальный эффект — confetti
   runConfetti();
@@ -700,5 +634,6 @@ function runConfetti(){
 
 </body>
 </html>
+
 
 
